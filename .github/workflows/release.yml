@@ -36,10 +36,10 @@ jobs:
 
       - name: Move Files Before Release
         run: |
-          mkdir -p cmd/temp
+          mkdir -p cmd/package/temp
           ls -al
-          mv ./main.* cmd/temp
-          cd cmd/temp
+          mv ./main.* cmd/package/temp
+          cd cmd/package/temp
           for OS in *;do for FILE in $OS/*;\
           do if [[ ${OS} =~ 'windows' ]];\
           then mv $FILE go_api_cli_$OS.exe && rm -rf $OS;\
