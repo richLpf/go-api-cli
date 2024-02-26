@@ -33,7 +33,7 @@ jobs:
       - name: Build CLI Binary For All Platform
         run: |
           cd cmd
-          go build main.go -n go-api-cli -a all -s all -p temp
+          go build main.go
 
       - name: Move Files Before Release
         run: |
