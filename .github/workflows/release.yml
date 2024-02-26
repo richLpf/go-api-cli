@@ -32,7 +32,6 @@ jobs:
 
       - name: Build CLI Binary For All Platform
         run: |
-          cd cmd
           go build main.go
 
       - name: Move Files Before Release
